@@ -3,79 +3,189 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=>, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        table, th,td{
-            border:2px solid blueviolet;
-            text-align:center;
-            padding: 10px;
-        }
-        table{
-            width:100%;
-        }
-        #mytable{
-            background-color: rgb(48, 92, 173);
-        }
-        #mytable tbody{
-            background-color: blueviolet;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application</title>
+    <link rel="stylesheet" href="styleApp.css">
 </head>
 <body>
-    <div>
-        <h2>HTML</h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur adipisci ullam ipsam architecto animi reiciendis iste, iusto nostrum,</p>
-        <p>minima maxime exercitationem quam distinctio alias sunt, porro vero beatae hic natus.</p>
-    </div>
-    <div>
-        <h2>CSS</h2>
-    </div>
-    <H1>Simple table</H1>
+    
+
+<form action="SEND ADDRESS" id="ft-form" method="POST" accept-charset="UTF-8" enctype="multipart/form-data">
+    <fieldset>
+      <legend>Job Application</legend>
+      <label>
+        <marquee width="40%" direction="left" height="30%">
+          Zimbabwe National Statistics Agency
+          </marquee>
+          <img src="zimstat_logo.png" alt="logo">
+        
+        
+        <h2>Application for *</h2>
+        <select name="Application for" required>
+          <option>Systems Developer</option>
+          <option>HR Officer</option>
+        </select>
+      </label>
+    </fieldset>
+    <fieldset>
+      <legend>Personal data</legend>
+      <div class="two-cols">
+        <label>
+          First name *
+          <input type="text" name="First name" required>
+        </label>
+        <label>
+         Surname *
+          <input type="text" name="Family name" required>
+        </label>
+      </div>
+      <div class="two-cols">
+        <label>
+          Citizenship
+          <input type="text" name="Citizenship">
+        </label>
+        <label>
+          Date of birth
+          <input type="date" name="Date of birth">
+        </label>
+      </div>
+      <label>
+        Address
+        <input type="text" name="Address">
+      </label>
+      <div class="two-cols">
+        <label>
+          Gender <br>
+          <input type="radio" name="gender" id="male" value="male">Male
+          <input type="radio" name="gender" id="female" value="female">Female
+        </label>
+        <label>
+          City
+          <input type="text" name="City">
+        </label>
+      </div>
+      <div class="two-cols">
+        <label>
+          Phone *
+          <input type="tel" name="Phone" required>
+        </label>
+        <label>
+          Email address *
+          <input type="email" name="Email" required>
+        </label>
+      </div>
+    </fieldset>
+   
+
+      
+        <legend>Education</legend>
+        <label>
+          Highest level of Education *
+          <select name="Education" required>
+            <option>PHD</option>
+            <option>Masters Degree</option>
+            <option>Degree</option>
+            <option>Diploma</option>
+            <option>Certificate</option>
+          </select>
+        </label>
+
+        <label>
+          Working experience *
+          <select name="experience" required>
+            <option>None</option>
+            <option>1 year</option>
+            <option>2 years</option>
+            <option>3 years</option>
+            <option>4 years</option>
+            <option>5 years +</option>
+          </select>
+        </label>
+
+        <label>
+          Additional qualification
+          <input type="text" name="Additional">
+        </label>
+
+
+        
+      <fieldset>
+      <legend>Employment History</legend>
+      <input type="hidden" name="MAX_FILE_SIZE" value="10485760">
+      <div class="two-cols">
+        <label>
+          Employer 1
+          <input type="text" name="employer1">
+        </label>
+
+          <label>
+              number of years *
+              <select name="experience" required>
+                <option>None</option>
+                <option>1 year</option>
+                <option>2 years</option>
+                <option>3 years</option>
+                <option>4 years</option>
+                <option>5 years +</option>
+              </select>
+            </label>
+      </div>
+
+      <div class="two-cols">
+        <label>
+          Employer 2
+          <input type="text" name="employer2">
+        </label>
+      <label>
+          number of years *
+          <select name="experience" required>
+            <option>None</option>
+            <option>1 year</option>
+            <option>2 years</option>
+            <option>3 years</option>
+            <option>4 years</option>
+            <option>5 years +</option>
+          </select>
+        </label>
+      </div>
+      </fieldset>
+
 
     
-    <table id="mytable">
-        <thead>
-        <tr>
-            <th>SL number</th>
-            <th>Name</th>
-            <th >Company</th>
-            <th>Designation</th>
-        </tr>
-        </thead>
-        <!--end of table header-->
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td>John Doe</td>
-                <td>Google</td>
-                <td>Manager</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Jenny Doe</td>
-                <td>Zimstat</td>
-                <td>Senior Developer</td> 
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Leonard Katova</td>
-                <td>Hugeline</td>
-                <td>Developer</td> 
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>ETatenda Saka</td>
-                <td>GISP</td>
-                <td>Systems Engineer</td> 
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>Tinashe Woeser</td>
-                <td>MOHA</td>
-                <td>Forensic Auditor</td> 
-            </tr>
-        </tbody>
-    </table>
+
+    <fieldset>
+      <legend>Application documents</legend>
+      <input type="hidden" name="MAX_FILE_SIZE" value="10485760">
+      <div class="two-cols">
+        <label>
+          Application letter
+          <input type="file" name="Application letter" accept=".doc,.docx,.pdf">
+        </label>
+        <label>
+          Curriculum vitae
+          <input type="file" name="Curriculum vitae" accept=".doc,.docx,.pdf">
+        </label>
+      </div>
+
+      <div class="two-cols">
+        <label>
+          Certificates
+          <input type="file" name="Certificates" accept=".doc,.docx,.pdf">
+        </label>
+        <label>
+          Other relevant documents
+          <input type="file" name="other Docs" accept=".doc,.docx,.pdf">
+        </label>
+      </div>
+      <p>Possible file types: DOC, PDF. Maximum file size: 10 MB.</p>
+    </fieldset>
+
+    <div class="btns">
+      <input type="text" name="_gotcha" value="" style="display:none;">
+      <input type="submit" value="Submit application">
+    </div>
+  </form>
+
 </body>
 </html>
+
